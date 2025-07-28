@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Maycon Denis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<script>
+    const allSections = document.querySelectorAll("section");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    }, {
+        threshold: 0.3
+    });
+
+    allSections.forEach(section => {
+        observer.observe(section);
+    });
+</script>
+
+<body>
+    <header class="topo">
+        <img src="./img/logo.jpeg" alt="Logo" class="Logo">
+        <nav class="menu">
+            <a href="#sobre">Sobre</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section class="sobre" id="sobre">
+        <h2>Sobre</h2>
+        <p>Sou um profissional da tecnologia, com foco atual para area de Desenvolvimento, atuando em BackEnd.<br>
+            linguagens de programação que estudo diariamente, HTML, CSS, PHP, JAVA</p>
+
+        <div class="icones-tecnologias">
+            <i class="fab fa-css3-alt" title="CSS"></i>
+            <i class="fab fa-php" title="PHP"></i>
+            <i class="fab fa-java" title="Java"></i>
+            <i class="fab fa-html5" title="HTML"></i>
+            <i class="fab fa-js" title="JavaScript"></i>
+        </div>
+
+        <a class="btn curriculo" href="Curriculo_Maycon_Denis.pdf"> Baixar Curriculo</a>
+
+    </section>
+        <section id="projetos">
+            <h2>Projetos</h2>
+            <div class="Projetos">
+                <h3>Site de uma empresa</h3>
+                <p>
+                    Pequeno projeto de um site empresarial que realizei, com lista de contatos, sobre o local, mapa das
+                    localizações em dois estados, e com muita interatividade.
+                </p>
+                <a class="btn-projeto" href="https://qualite-essence.netlify.app/" target="_blank">Visitar site</a>
+            </div>
+        </section>
+
+        </div>
+    </section>
+    <section class="contato" id="contato">
+        <h2>Contato</h2>
+        <p>Email: maycon01abrao@gmail.com<br>
+            Telefone: (62) 98154-4208 <br>
+            <a class="btn linkedin" href="https://www.linkedin.com/in/maycon-denis-81a088240">Linkedin</a>
+    </section>
+    <footer>
+        <p>© 2025 Maycon Denis</p>
+    </footer>
+</body>
+
+</html>

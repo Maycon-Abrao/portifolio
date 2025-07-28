@@ -1,0 +1,216 @@
+/* RESET DA BAGINA*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Fundo com gradiente moderno */
+body {
+  margin:0;
+ 
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+  color: white;
+  padding-top: 60px; /* igual à altura do .topo */
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll
+}
+
+/* Header fixo e estilizado */
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Logo menor e bem alinhada */
+.Logo {
+  width: 50px;
+  height: auto;
+}
+
+/* Menu bonito e espaçado */
+.menu {
+  display: flex;
+  gap: 2rem;
+  flex-wrap:wrap;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.menu a {
+  color: rgba(18, 141, 212, 0.838);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #c2d1d1;
+}
+
+/* Seções com cards */
+section {
+  max-width: 900px;
+  margin: 6rem auto 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  backdrop-filter: blur(5px);
+}
+
+/* Botões com hover e animação */
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #007BFF;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #111;
+  color: white;
+  margin-top: 2rem;
+}
+
+
+section {
+  height: 100vh; /* 100% da altura da tela */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centraliza verticalmente */
+  align-items: center;     /* centraliza horizontalmente */
+  text-align: center;
+  padding: 2rem;
+  scroll-snap-align: start;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+
+.menu a.active {
+    color: #fff;
+    border-bottom: 2px solid#e8ebef;
+}
+
+section {
+  opacity: 2;
+  transform: translateY(30px);
+  transition: all 0.1s ease;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn:hover {
+  background-color: #2929ebb6;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #0d3890;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+section {
+  height: 100vh;
+}
+
+
+/* H2 com interatividade*/
+
+section h2 {
+  font-size: 3rem; /* aumenta o tamanho */
+  color: #ffffff;  /* cor branca */
+  margin-bottom: 3rem;
+  position: relative;
+  animation: slideDown 1s ease forwards;
+}
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+section h2:hover {
+  color: #0c4242b9;
+  text-shadow: 0 0 10px #c6cdcd, 0 0 20px #a7afafbf;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+
+/* ICONES HTML .....*/
+
+.icones-tecnologias {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+.icones-tecnologias i:hover {
+  color: #00ffff;
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+}
+
+/*BOTAO DO SITE*/ 
+
+.btn-projeto {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #00bfff;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.4);
+}
+
+.btn-projeto:hover {
+  background-color: #0099cc;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.8);
+}
